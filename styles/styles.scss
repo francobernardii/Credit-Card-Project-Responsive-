@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap');
+
+//COLORS
+$White: hsl(0, 0%, 100%);
+$Light-grayish-violet: hsl(270, 3%, 87%);
+$Dark-grayish-violet: hsl(279, 6%, 55%);
+$Very-dark-violet1: #21092f;
+$Very-dark-violet2: #451163;
+$errorColor: hsl(0, 100%, 66%);
+// FONTS
+$body-fontSize: 18px;
+$body-fontWeight: 500;
+$body-fontFamily: 'Space Grotesk', sans-serif;
+
+:root{
+    font-family: $body-fontFamily;
+    font-weight: $body-fontWeight;
+    font-size: $body-fontSize;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.flexDisplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 300px;
+    height: 160px;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.principal-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: $White;
+    flex-direction: column;
+    .card-container{
+        width: 100%;
+        height: 230px;
+        background-image: url(../assets/images/bg-main-mobile.png);
+        background-size: cover;
+        position: relative;
+
+        .front-card{
+            background: url(../assets/images/bg-card-front.png);
+            left: 12px;
+            bottom: -30px;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .logo-container{
+                width: 100%;
+                img{
+                    margin-left: 20px;
+                    margin-top: 20px;
+                    width: 60px;
+                }
+            }
+
+            .number-container{
+                width: 100%;
+                text-align: center;
+                span{
+                    color: $White;
+                    letter-spacing: 3px;
+                }
+
+            }
+
+            .nameDate-container{
+                width: 100%;
+                margin-bottom: 15px;
+                flex-direction: row;
+                justify-content: space-around;
+                font-size: 10px;
+                color: $White;
+
+                span{
+                    width: 100px;
+                }
+
+                .date{
+                    text-align: right;
+                }
+            }
+        }
+
+        .back-card{
+            right: 12px;
+            bottom: 55px;
+            background-color: $White;
+            background: url(../assets/images/bg-card-back.png) ;
+            background-size: cover;
+
+            span{
+                height: 100%;
+                color: $White;
+                margin: auto 10px;
+                font-size: 10px;
+                float: right;
+                margin-top: 25%;
+                margin-right: 15%;
+
+            }
+        }
+    }
+
+    .form-container{
+        width: 100%;
+        flex-grow: 1;
+
+        form{
+            max-width: 600px;
+            max-height: 390px;
+            width: 90%;
+            height: 70%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            .form-container{
+                width: 100%;
+                flex-grow: 1;
+            }
+
+            
+            label{
+                width: 80%;
+                text-align: center;
+                font-size: 12px;
+                font-weight: bold;
+                color: $Very-dark-violet1;
+                letter-spacing: 1px;
+            }
+
+            input{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 15px;
+                margin-top: 5px;
+                padding: 20px;
+                border-radius: 8px;
+                box-sizing: border-box;
+                outline: none;
+                border: 1px solid transparent;
+                background-color: #f1f1f1;
+
+                &::placeholder{
+                    color: rgb(197, 197, 197);
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                }
+
+                &:focus{
+                    background: none;
+                    box-shadow: 0px 0px 5px #b481d3;
+                    border: 1px solid #d1a3ee;
+                    transition: all 0.5s ease;
+                }
+
+                &:active{
+                    box-shadow: 0px 0px 5px #b481d3;
+                }
+            }
+
+            .number-container{
+                position: relative;
+                span{
+                    font-size: 12px;
+                    color: $errorColor;
+                }
+            }
+
+            .date-cvc-container{
+                flex-direction: row;
+                gap: 10px;
+
+                label{
+                    width: 100%;
+                    text-align: left;
+                }
+
+                input{
+                    min-width: 100px;
+                }
+
+                .date-container{
+                    height: 100%;
+                    flex-grow: 2;
+                    flex-direction: column;
+                    justify-content: space-evenly;                    
+                    .input-container{
+                        gap: 10px;
+                        width: 100%;
+                        position: relative;
+                    }
+                    
+                }
+
+                .cvc-container{
+                    height: 100%;
+                    justify-content: space-evenly;
+                    flex-direction: column;
+
+                    .input-container{
+                        gap: 10px;
+                        position: relative;
+                    }
+                }
+
+                span{
+                    position: absolute;
+                    bottom: -50%;
+                    left: 1%;
+                    font-size: 12px;
+                    color: $errorColor;
+                }
+            }
+
+            .button-container{
+                button{
+                    width: 100%;
+                    height: 50px;
+                    outline: none;
+                    border: none;
+                    background: $Very-dark-violet1;
+                    color: $White;
+                    border-radius: 10px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    transition: all 0.2s ease;
+                    &:hover{
+                        background-color: $Very-dark-violet2;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .completed-form{
+            max-width: 600px;
+            max-height: 390px;
+            width: 50%;
+            height: 40%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            .text-container{
+                width: 100%;
+                flex-direction: column;
+                
+            h3{
+                letter-spacing: 3px;
+            }
+
+                p{
+                    font-size: 12px;
+                    color: $Dark-grayish-violet;
+                }
+            }
+
+            .button-container{
+                width: 100%;
+                button{
+                    width: 80%;
+                    height: 50px;
+                    outline: none;
+                    border: none;
+                    background: $Very-dark-violet1;
+                    color: $White;
+                    border-radius: 10px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    transition: all 0.2s ease;
+                    &:hover{
+                        background-color: $Very-dark-violet2;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bRed{
+    border: 1px solid $errorColor !important;
+}
+
+.dNone{
+    display: none;
+}
+
+.dBlock{
+    display: block;
+}
+
+
+@media (min-width: 1280px) { 
+    .principal-container{
+        flex-direction: row;
+        
+        .card-container{
+            height: 100%;
+            width: 600px;
+            background-image: url(../assets/images/bg-main-desktop.png);
+
+            .front-card{
+                left: 200px;
+                top: 30%;
+            }
+
+            .back-card{
+                left: 250px;
+                top: 50%;
+                span{
+                    width: 20px;
+                }
+            }
+        }
+
+        .form-container{
+            form{
+                width: 30%;
+                min-width: 330px;
+                gap: 30px;
+            }
+        }
+    }
+}
+
+@media (max-height: 720px){
+    .principal-container{
+        .form-container{
+            form{
+                gap: 26px;
+            }
+        }
+    }
+}

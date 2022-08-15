@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap");
+:root {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.flexDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  height: 160px;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.principal-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(0deg, 0%, 100%);
+  flex-direction: column;
+}
+.principal-container .card-container {
+  width: 100%;
+  height: 230px;
+  background-image: url(../assets/images/bg-main-mobile.png);
+  background-size: cover;
+  position: relative;
+}
+.principal-container .card-container .front-card {
+  background: url(../assets/images/bg-card-front.png);
+  left: 12px;
+  bottom: -30px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.principal-container .card-container .front-card .logo-container {
+  width: 100%;
+}
+.principal-container .card-container .front-card .logo-container img {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 60px;
+}
+.principal-container .card-container .front-card .number-container {
+  width: 100%;
+  text-align: center;
+}
+.principal-container .card-container .front-card .number-container span {
+  color: hsl(0deg, 0%, 100%);
+  letter-spacing: 3px;
+}
+.principal-container .card-container .front-card .nameDate-container {
+  width: 100%;
+  margin-bottom: 15px;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 10px;
+  color: hsl(0deg, 0%, 100%);
+}
+.principal-container .card-container .front-card .nameDate-container span {
+  width: 100px;
+}
+.principal-container .card-container .front-card .nameDate-container .date {
+  text-align: right;
+}
+.principal-container .card-container .back-card {
+  right: 12px;
+  bottom: 55px;
+  background-color: hsl(0deg, 0%, 100%);
+  background: url(../assets/images/bg-card-back.png);
+  background-size: cover;
+}
+.principal-container .card-container .back-card span {
+  height: 100%;
+  color: hsl(0deg, 0%, 100%);
+  margin: auto 10px;
+  font-size: 10px;
+  float: right;
+  margin-top: 25%;
+  margin-right: 15%;
+}
+.principal-container .form-container {
+  width: 100%;
+  flex-grow: 1;
+}
+.principal-container .form-container form {
+  max-width: 600px;
+  max-height: 390px;
+  width: 90%;
+  height: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.principal-container .form-container form .form-container {
+  width: 100%;
+  flex-grow: 1;
+}
+.principal-container .form-container form label {
+  width: 80%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #21092f;
+  letter-spacing: 1px;
+}
+.principal-container .form-container form input {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 15px;
+  margin-top: 5px;
+  padding: 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+}
+.principal-container .form-container form input::-moz-placeholder {
+  color: rgb(197, 197, 197);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.principal-container .form-container form input:-ms-input-placeholder {
+  color: rgb(197, 197, 197);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.principal-container .form-container form input::placeholder {
+  color: rgb(197, 197, 197);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.principal-container .form-container form input:focus {
+  background: none;
+  box-shadow: 0px 0px 5px #b481d3;
+  border: 1px solid #d1a3ee;
+  transition: all 0.5s ease;
+}
+.principal-container .form-container form input:active {
+  box-shadow: 0px 0px 5px #b481d3;
+}
+.principal-container .form-container form .number-container {
+  position: relative;
+}
+.principal-container .form-container form .number-container span {
+  font-size: 12px;
+  color: hsl(0deg, 100%, 66%);
+}
+.principal-container .form-container form .date-cvc-container {
+  flex-direction: row;
+  gap: 10px;
+}
+.principal-container .form-container form .date-cvc-container label {
+  width: 100%;
+  text-align: left;
+}
+.principal-container .form-container form .date-cvc-container input {
+  min-width: 100px;
+}
+.principal-container .form-container form .date-cvc-container .date-container {
+  height: 100%;
+  flex-grow: 2;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.principal-container .form-container form .date-cvc-container .date-container .input-container {
+  gap: 10px;
+  width: 100%;
+  position: relative;
+}
+.principal-container .form-container form .date-cvc-container .cvc-container {
+  height: 100%;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.principal-container .form-container form .date-cvc-container .cvc-container .input-container {
+  gap: 10px;
+  position: relative;
+}
+.principal-container .form-container form .date-cvc-container span {
+  position: absolute;
+  bottom: -50%;
+  left: 1%;
+  font-size: 12px;
+  color: hsl(0deg, 100%, 66%);
+}
+.principal-container .form-container form .button-container button {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: #21092f;
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+.principal-container .form-container form .button-container button:hover {
+  background-color: #451163;
+  cursor: pointer;
+}
+.principal-container .form-container .completed-form {
+  max-width: 600px;
+  max-height: 390px;
+  width: 50%;
+  height: 40%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.principal-container .form-container .completed-form .text-container {
+  width: 100%;
+  flex-direction: column;
+}
+.principal-container .form-container .completed-form .text-container h3 {
+  letter-spacing: 3px;
+}
+.principal-container .form-container .completed-form .text-container p {
+  font-size: 12px;
+  color: hsl(279deg, 6%, 55%);
+}
+.principal-container .form-container .completed-form .button-container {
+  width: 100%;
+}
+.principal-container .form-container .completed-form .button-container button {
+  width: 80%;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: #21092f;
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+.principal-container .form-container .completed-form .button-container button:hover {
+  background-color: #451163;
+  cursor: pointer;
+}
+
+.bRed {
+  border: 1px solid hsl(0deg, 100%, 66%) !important;
+}
+
+.dNone {
+  display: none;
+}
+
+.dBlock {
+  display: block;
+}
+
+@media (min-width: 1280px) {
+  .principal-container {
+    flex-direction: row;
+  }
+  .principal-container .card-container {
+    height: 100%;
+    width: 600px;
+    background-image: url(../assets/images/bg-main-desktop.png);
+  }
+  .principal-container .card-container .front-card {
+    left: 200px;
+    top: 30%;
+  }
+  .principal-container .card-container .back-card {
+    left: 250px;
+    top: 50%;
+  }
+  .principal-container .card-container .back-card span {
+    width: 20px;
+  }
+  .principal-container .form-container form {
+    width: 30%;
+    min-width: 330px;
+    gap: 30px;
+  }
+}
+@media (max-height: 720px) {
+  .principal-container .form-container form {
+    gap: 26px;
+  }
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Project</title>
+    <link rel="shortcut icon" href="../assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div class="principal-container flexDisplay">
+        <div class="card-container">
+            <div class="back-card card">
+                <span id="cardCvc">123</span>
+            </div>
+            <div class="front-card card flexDisplay">
+                <div class="logo-container">
+                    <img src="../assets/images/card-logo.svg" alt="logo">
+                </div>
+                <div class="number-container">
+                    <span id="cardNumber">1234 5678 9123 0000</span>
+                </div>
+                <div class="nameDate-container flexDisplay">
+                        <span class="name" id="cardName">JANE APPLESEED</span>
+                        <span class="date" id="cardDate"> 00/00</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-container flexDisplay">
+            <form action="" id="formContainer" class="flexDisplay ">
+                <div class="form-container">
+                    <label for="inputName">CARDHOLDER NAME</label>
+                    <input type="text" maxlength="17" name="cardholder" id="inputName" placeholder="e.g. Jane Appleseed">
+                </div>
+                <div class="form-container number-container">
+                    <label for="inputNumber">CARD NUMBER</label>
+                    <input type="text" name="cardnumber" id="inputNumber" maxlength="16" placeholder="e.g. 1234 5678 9123 0000" >
+                    <span id="span1" class="dNone">Wrong format, 12 number only</span>
+                </div>
+                <div class="date-cvc-container form-container flexDisplay">
+                    <div class="date-container flexDisplay">
+                        <label for="inputDate1">EXP.DATE (MM/YY)</label>
+                        <div class="input-container flexDisplay">
+                            <input type="text" id="inputDate1" maxlength="2" placeholder="MM">
+                            <span id="span2" class="dNone">Wrong value</span>
+                            <input type="text" id="inputDate2" maxlength="2" placeholder="YY">
+                        </div>
+                        
+                    </div>
+                    <div class="cvc-container flexDisplay">
+                        <label for="cvc">CVC</label>
+                        <div class="input-container flexDisplay">
+                            <input type="text" name="cvc" id="inputCvc" maxlength="3" placeholder="e.g. 123">
+                            <span id="span3" class="dNone">Can't be blank</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container form-container flexDisplay">
+                    <button type="button" onclick="validateFields()">Confirm</button>
+                </div>
+            </form>
+
+            <div id="completedForm" class="completed-form dNone flexDisplay">
+                <div class="img-container">
+                    <img src="./assets/images/icon-complete.svg" alt="Logo tick">
+                </div>
+                <div class="text-container flexDisplay">
+                    <h3>THANK YOU!</h3>
+                    <p>We've added your card details</p>
+                </div>
+                <div class="button-container flexDisplay">
+                    <button>Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
